@@ -23,10 +23,11 @@ Java 客户端作为节点必须和 Elasticsearch 有相同的_主要_版本；�
 更多的 Java 客户端信息可以在 https://www.elastic.co/guide/en/elasticsearch/client/index.html[Elasticsearch Clients] 中找到。
 
 ==== RESTful API with JSON over HTTP
+==== 基于 HTTP 协议，以 JSON 为数据交互格式的 RESTful API
 
 所有其他语言可以使用((("RESTful API, communicating with Elasticseach"))) RESTful API 通过端口((("port 9200 for non-Java clients"))) _9200_ 和 Elasticsearch 进行通信，你可以用你最喜爱的 web 客户端访问 Elasticsearch 。事实上，正如你所看到的，你甚至可以使用`curl` 命令来和 Elasticsearch 交互。((("curl command", "talking to Elasticsearch with")))
 
-NOTE: Elasticsearch 为以下语言提供了官方客户端--Groovy、JavaScript、.NET、 PHP、 Perl、 Python 和 Ruby--还有很多社区提供的客户端和集成，所有这些都可以在 https://www.elastic.co/guide/en/elasticsearch/client/index.html[Elasticsearch Clients] 中找到。
+NOTE: Elasticsearch 为以下语言提供了官方客户端--Groovy、JavaScript、.NET、 PHP、 Perl、 Python 和 Ruby--还有很多社区提供的客户端和插件，所有这些都可以在 https://www.elastic.co/guide/en/elasticsearch/client/index.html[Elasticsearch Clients] 中找到。
 
 一个 Elasticsearch 请求和任何 HTTP 请求一样由若干相同的部件组成：((("HTTP requests")))((("requests to Elasticsearch")))
 
@@ -38,7 +39,7 @@ curl -X<VERB> '<PROTOCOL>://<HOST>:<PORT>/<PATH>?<QUERY_STRING>' -d '<BODY>'
 被 `< >` 标记的部件：
 
 [horizontal]
-`VERB`::            恰当的 HTTP _方法_ 或 _动词_ : `GET`、 `POST`、 `PUT`、 `HEAD` 或者 `DELETE`。
+`VERB`::            适当的 HTTP _方法_ 或 _动词_ : `GET`、 `POST`、 `PUT`、 `HEAD` 或者 `DELETE`。
 `PROTOCOL`::        `http` 或者 `https`（如果你在 Elasticsearch 前面有一个 `https` 代理）
 `HOST`::            Elasticsearch 集群中任意节点的主机名，或者用 +localhost+ 代表本地机器上的节点。
 `PORT`::            运行 Elasticsearch HTTP 服务的端口号，默认是 `9200` 。
@@ -106,4 +107,4 @@ GET /_count
 --------------------------------------------------
 // SENSE: 010_Intro/15_Count.json
 
-事实上， ((( "Sense console")))((("Sense console (Kibana app)", "curl requests in")))<<sense, Sense console>> 也使用这样相同的格式。如果你正在阅读这本书的在线版本,可以通过单击上面的视图链接打开和运行示例代码。
+事实上， ((( "Sense console")))((("Sense console (Kibana app)", "curl requests in")))<<sense, Sense 控制台>> 也使用这样相同的格式。如果你正在阅读这本书的在线版本,可以通过点击 sense 链接视图在 sense 上打开和运行示例代码。
