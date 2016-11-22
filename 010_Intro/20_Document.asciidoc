@@ -1,3 +1,4 @@
+[[_document_oriented]]
 === 面向文档
 
 在应用程序中对象很少只是一个简单的键和值的列表。通常，它们拥有更复杂的数据结构，可能包括日期、地理信息、其他对象或者数组等。
@@ -9,7 +10,7 @@ Elasticsearch 是 _面向文档_ 的，意味着((("document oriented")))它存�
 
 ==== JSON
 
-Elasticsearch 使用 JavaScript Object Notation 或者 http://en.wikipedia.org/wiki/Json[_JSON_] 作为文档的序列化格式。JSON 序列化支持大多数编程语言，并且已经成为 NoSQL 领域的标准格式。
+Elasticsearch 使用 JavaScript Object Notation 或者 http://en.wikipedia.org/wiki/Json[_JSON_] 作为文档的序列化格式。JSON 序列化被大多数编程语言所支持，并且已经成为 NoSQL 领域的标准格式。
 它简单、简洁、易于阅读。
 
 考虑一下这个 JSON 文档，它代表了一个 user 对象：
