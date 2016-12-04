@@ -1,7 +1,7 @@
 [[_talking_to_elasticsearch]]
 === 和 Elasticsearch 交互
 
-和 Elasticsearch 的交互方式取决于你是否使用 Java
+和 Elasticsearch 的交互方式取决于((("Elasticsearch", "talking to")))你是否使用 Java
 
 ==== Java API
 
@@ -14,11 +14,11 @@
     轻量级的((("transport client")))传输客户端可以可以将请求发送到远程集群。它本身不加入集群，但是它可以将请求转发到集群中的一个节点上。
  
 
-两个 Java 客户端都是通过 _9300_ 端口并使用本地 Elasticsearch _传输_ 协议和集群交互。集群中的节点通过端口 9300 彼此通信。如果这个端口没有打开，节点将无法形成一个集群。
+两个 Java 客户端都是通过 _9300_ 端口并使用((("port 9300 for Java clients")))本地 Elasticsearch _传输_ 协议和集群交互。集群中的节点通过端口 9300 彼此通信。如果这个端口没有打开，节点将无法形成一个集群。
 
 [TIP]
 ====
-Java 客户端作为节点必须和 Elasticsearch 有相同的_主要_版本；否则，它们之前将无法互相理解。
+Java 客户端作为节点必须和 Elasticsearch 有相同的 _主要_ 版本；否则，它们之前将无法互相理解。
 ====
 
 更多的 Java 客户端信息可以在 https://www.elastic.co/guide/en/elasticsearch/client/index.html[Elasticsearch Clients] 中找到。
